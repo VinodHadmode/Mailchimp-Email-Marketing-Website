@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+nav {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    height: 80px;
+    width: 100%;
+}
+
+.left {
+    float: left;
+    margin-left: 20px;
+}
+
+.right {
+    float: right;
+    margin-right: 20px;
+}
+
+.right>li>a:hover {
+    text-decoration: underline;
+}
+
+nav>ul>li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px 5px;
+}
+
+nav>ul>li>a {
+    color: black;
+    font-size: 20px;
+}
+
+nav>ul>li>a:hover {
+    color: rgb(10, 169, 231);
+}
+
+.right>li~button {
+    margin: 0px 10px;
+}
+
+.checkbtn {
+    font-size: 20px;
+    color: rgb(214, 24, 24);
+    float: right;
+
+}
+
+.loginbtn {
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.loginbtn:hover {
+    box-shadow: 0 5px;
+}
+
+.signupbtn {
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgb(230, 230, 23);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.signupbtn:hover {
+    box-shadow: 0 5px;
+
+}
+
+#searchicon {
+    width: 55px;
+    height: 25px;
+    /* border-radius: 10px; */
+}
+
+.email-revenue>div {
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.email-revenue>h1 {
+    color: rgb(39, 36, 36);
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 50px;
+}
+
+.image-container>div>a {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.image-container>div>img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.image-container>div {
+    text-align: left;
+    /* border: 1px solid black; */
+    padding: 20px;
+}
+
+.image-container>div:nth-child(1) {
+    background-color: rgb(223, 133, 60);
+}
+
+.image-container>div:nth-child(2) {
+    background-color: rgb(226, 174, 97);
+}
+
+.learn-more {
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.video-container {
+    background-color: rgb(48, 45, 45);
+}
+
+.video-container>div {
+    width: 60%;
+    margin: auto;
+}
+
+.video-container>div>p {
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.right-plan {
+    border: 1px solid black;
+}
+
+.right-plan>h1 {
+    text-align: center;
+}
+
+.right-plan button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#plan-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+#plan-cards>div {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 15px;
+}
+
+.benifits>a {
+    text-decoration: underline;
+    color: rgb(61, 58, 58);
+}
+
+.generate-4x {
+    margin-top: 30px;
+}
+
+.subdiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 30px;
+
+}
+
+.subdiv h1 {
+    text-align: center;
+}
+
+#animated {
+    border: 1px solid red;
+    height: 400px;
+}
+
+#side-bar:nth-child(2) {
+    height: 400px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 10px;
+    scroll-behavior: smooth;
+
+
+}
+
+.subdiv img {
+    width: 100%;
+}
+
+.subdiv>:nth-child(3) {
+    background-color: rgb(212, 145, 145);
+    padding: 10px;
+}
+
+.animated-video-sidebar {
+    height: 200px;
+    width: auto;
+}
+
+.learnmorebtn {
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    margin-top: 20px;
+    padding: 7px;
+    font-size: 20px;
+
+}
+
+.learnmorebtn:hover {
+    background-color: yellow;
+    box-shadow: 0 5px;
+    cursor: pointer;
+}
+
+/* for second container */
+.subdiv2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 30px;
+
+}
+
+.subdiv2 h1 {
+    text-align: center;
+}
+
+.Get88 {
+    margin-top: 30px;
+}
+
+#animated2 {
+    border: 1px solid red;
+    height: 400px;
+}
+
+#side-bar2:nth-child(2) {
+    height: 400px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 10px;
+    scroll-behavior: smooth;
+
+
+}
+
+.subdiv2 img {
+    width: 100%;
+}
+
+.subdiv2>:nth-child(3) {
+    background-color: rgb(212, 145, 145);
+    padding: 10px;
+}
+
+.social-media-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 30px;
+
+}
+
+.social-media {
+    margin-top: 30px;
+
+}
+
+.social-media-container img {
+    width: 60%;
+
+}
+
+.social-media-container>div {
+    display: flex;
+
+}
+
+.social-media-container>div:hover {
+    background-color: rgb(228, 212, 212);
+}
+
+.disclaimer {
+    margin-top: 30px;
+
+}
+
+.disclaimer>ol>li {
+    margin: 10px 10px;
+    display: list-item;
+}
+
+.footer {
+    background-color: rgb(241, 183, 116);
+
+}
+
+.footer1 {
+    display: flex;
+    padding: 30px;
+}
+
+.footer a {
+    text-decoration: underline;
+}
+
+.footer2 {
+    margin: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+}
+
+.footer2 img {
+    width: 100%;
+}
+
+.checkbtn {
+    padding: 10px;
+    background-color: rgb(241, 183, 116);
+    border: none;
+    margin-top: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.checkbtn:hover {
+    border-radius: 15px;
+    box-shadow: 0 5px;
+    background-color: rgb(245, 245, 35);
+
+}
+
+.footer3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-top: 30px;
+}
+
+.footer3>div>img {
+    width: 60%;
+}
+
+.wrapper {
+    /* margin-left: -50px; */
+    display: flex;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fa:hover {
+    /* opacity: ; */
+    /* background-color: #3B5998; */
+    color: rgb(44, 41, 238);
+}
+
+select {
+    width: 100px;
+    height: 30px;
+}
+.footer hr{
+    height:1px;
+    border-width:0;
+    color:gray;
+    background-color:gray
+}
