@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+        body {
+            font-family: "Means Web", Georgia, Times, "Times New Roman", serif;
+        }
+
+        .login-box {
+            width: fit-content;
+            height: 700px;
+            margin: auto;
+        }
+
+        form {
+            width: auto;
+        }
+
+        form label {
+            display: flex;
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+
+        }
+
+        form input {
+            width: 100%;
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        form input[type="submit"] {
+            font-size: 18px;
+            background-color: rgb(56, 169, 189);
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h1>Log In</h1>
+        <p>Need a Mailchimp account? <a href="#">Create an account</a></p>
+
+        <form onsubmit="handleForm()">
+            <label for="username">Username or Email</label>
+            <input type="text" id="useroremail">
+            <label for="password">Password</label>
+            <input type="text" id="pass">
+            <input type="submit" value="Log In">
+        </form>
+        <p> <input type="checkbox">Keep me Logged in</p>
+        <p><a href="#">Forgot username?</a> . <a href="#">Forgot password?</a> <a href="#"> Can't Log In?</a></p>
+    </div>
+</body>
+
+</html>
+<script>
+    let SignupDetails = JSON.parse(localStorage.getItem("Signup-details"))||[]
+    console.log(SignupDetails)
+
+    function handleForm() {
+        event.preventDefault()
+        usernameOrEmail = document.querySelector("#useroremail").value
+        password = document.querySelector("#pass").value
+        
+        if((usernameOrEmail==SignupDetails.email)||(usernameOrEmail==SignupDetails.username) ){
+            if(password==SignupDetails.password){
+                alert("Login Successfull")
+            }
+            else{
+                alert("Wrong Password")
+            }
+        }
+        else{
+            alert("Wrong Credentials")
+        }
+
+    }
+</script>
