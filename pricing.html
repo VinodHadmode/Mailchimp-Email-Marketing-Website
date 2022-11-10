@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            text-align: center;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            height: 80px;
+            width: 100%;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+        }
+
+        .left {
+            float: left;
+            margin-left: 20px;
+        }
+
+        .right {
+            float: right;
+            margin-right: 20px;
+        }
+
+        .right>li>a:hover {
+            text-decoration: underline;
+        }
+
+        nav>ul>li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0px 5px;
+        }
+
+        nav>ul>li>a {
+            color: black;
+            font-size: 20px;
+            text-decoration: none;
+
+        }
+
+        nav>ul>li>a:hover {
+            color: rgb(10, 169, 231);
+        }
+
+        .right>li~button {
+            margin: 0px 10px;
+        }
+
+        .checkbtn {
+            font-size: 20px;
+            color: rgb(214, 24, 24);
+            float: right;
+
+        }
+
+        .loginbtn {
+            padding: 10px;
+            border-radius: 15px;
+            background-color: rgb(230, 230, 23);
+            font-size: 15px;
+            cursor: pointer;
+            border: 1px solid black;
+            text-decoration: none;
+
+        }
+
+        .loginbtn:hover {
+            box-shadow: 0 5px;
+        }
+
+        .signupbtn {
+            padding: 10px;
+            border-radius: 15px;
+            background-color: rgb(230, 230, 23);
+            border: 1px solid black;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .signupbtn:hover {
+            box-shadow: 0 5px;
+
+        }
+
+        .options {
+            margin-top: 120px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .options>p:hover {
+            color: rgb(75, 189, 189);
+        }
+
+        #head {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+
+        .right-plan {
+            margin-top: 30px;
+
+        }
+
+        .card-container {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+
+        .cards {
+            padding: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        }
+
+        .cards p {
+            margin-top: 10px;
+        }
+
+        .cards button {
+            margin-top: 20px;
+            padding: 8px;
+            border-radius: 15px;
+            background-color: rgb(230, 230, 23);
+            border: 1px solid black;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .cards button:hover {
+            box-shadow: 0 3px;
+        }
+
+        .contact {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            width: fit-content;
+            border: 2px solid gray;
+        }
+
+        .contact select {
+            height: 40px;
+            width: 100px;
+        }
+        .cards h4{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sticky">
+
+        <ul class="left">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Inspiration</a></li>
+            <li><a href="#">Pricing</a></li>
+
+        </ul>
+        <ul class="right">
+            <li><a href="#">Sales:<a href="">+123456789</a></a></li>
+            <!-- <img id="searchicon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.pn" alt=""> -->
+
+            <a href="./login.html" class="loginbtn">Log In</a>
+            <a href="./signup.html" class="signupbtn">Sign Up</a>
+
+        </ul>
+    </nav>
+    <!-- options part  -->
+    <div class="options">
+        <p>Marketing</p>
+        <p>Websites & Commerce</p>
+        <p>Transactional Email</p>
+    </div>
+
+    <div class="contact">
+        <p>How many contacts do you have? <select onchange="handleFilter()" name="" id="selected">
+                <option value="500">500</option>
+                <option value="1500">1500</option>
+                <option value="2500">2500</option>
+                <option value="5000">5000</option>
+
+            </select> </p>
+    </div>
+    <div class="right-plan">
+        <div id="head">
+            <h1>Find the right plan</h1>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+
+    let pricing = [
+        {
+            title: "Premium",
+            description: "Our most advanced tools, unlimited contacts, and priority support; built for teams.",
+            price: {
+                p1: 23000,
+                p2: 23000,
+                p3: 23000,
+                p4: 23000
+            },
+            benifits: {
+                Monthly_Email:{
+                    e1:150000,
+                    e2:150000,
+                    e3:150000,
+                    e4:150000
+                },
+                Maximum_contacts: "Unlimited",
+                Users: "Unlimited",
+            }
+
+        },
+        {
+            title: "Standerd",
+            description: "Sell even more with personalization, optimization tools, and enhanced automations.",
+            price: {
+                p1:1150,
+                p2:3850,
+                p3:3850,
+                p4:5800
+            },
+            benifits: {
+                Monthly_Email: {
+                    e1:6000,
+                    e2:30000,
+                    e3:30000,
+                    e4:60000
+                },
+                Maximum_contacts: 100000,
+                Users: "5 Seats",
+            }
+
+        },
+        {
+            title: "Essentials",
+            description: "Send the right content at the right time with testing and scheduling features.",
+            price: {
+                p1:770,
+                p2:1500,
+                p3:2300,
+                p4:3850
+            },
+            benifits: {
+                Monthly_Email: {
+                    e1:5000,
+                    e2:15000,
+                    e3:25000,
+                    e4:50000
+                },
+                Maximum_contacts: 50000,
+                Users: "3 Seats",
+            }
+        },
+        {
+            title: "Free",
+            description: "Easily create email campaigns and learn more about your customers",
+            price: {
+                p1:0,
+                p2:"contact limit exceded",
+                p3:"contact limit exceded",
+                p4:"contact limit exceded"
+            },
+            benifits: {
+                Monthly_Email: {
+                    e1:2500,
+                    e2:"limit over",
+                    e3:"limit over",
+                    e4:"limit over"
+                },
+                Maximum_contacts: 500,
+                Users: "1 Seats",
+            }
+        }
+    ]
+
+    localStorage.setItem("Subscription-details", JSON.stringify(pricing))
+
+  
+    displayTable(pricing)
+
+    function displayTable(data) {
+
+        data.forEach(function (element,i) {
+            let carddiv = document.createElement("div");
+            carddiv.setAttribute("class", "card-container")
+
+
+            let div = document.createElement("div");
+            div.setAttribute("class", "cards")
+
+            let title = document.createElement("h2");
+            title.innerText = element.title
+
+            let description = document.createElement("p")
+            description.innerText = element.description
+
+            
+            let price = document.createElement("h4")
+            price.innerHTML = "Price:&nbsp" + element.price.p1 + "<br>per month"
+
+            let button = document.createElement("button")
+            if (element.price == 0) {
+                button.innerText = "Sign up Free"
+            }
+            else {
+                button.innerText = "Buy Now"
+            }
+
+            let benifits = document.createElement("p")
+            benifits.innerText = "monthly email:" + element.benifits.Monthly_Email.e1
+
+
+
+            div.append(title, description, price, benifits, button)
+            document.querySelector(".right-plan").append(carddiv)
+            document.querySelector(".card-container").append(div)
+
+        });
+
+    }
+</script>

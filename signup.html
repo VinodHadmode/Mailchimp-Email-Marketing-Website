@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .signup-box{
+            width: fit-content;
+            height: 700px;
+            margin: auto;
+        }
+        form{
+            width: auto;
+        }
+        form label{
+            display: flex;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        form input{
+            width: 100%;
+            height:30px ;
+            margin-top: 10px;
+        }
+        input[type="submit"]{
+            height: 40px;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: rgb(19, 134, 155);
+            color: white;
+        }
+       
+    </style>
+    
+</head>
+<body>
+    <div class="signup-box">
+       <h1>Sign up for mailchimp</h1> 
+       <p>Create a free account or <a href="#">log in</a></p>
+       <form onsubmit="handleForm()">
+          <label>Email</label>
+          <input type="email" id="email">
+          <label>Username</label>
+          <input type="text" id="username">
+          <label>Password</label>
+          <input type="password" id="password">
+          <p><input type="checkbox">By creating an account, you agree to our <a href="#">Terms </a> and have read and acknowledge the <a href="#">Global Privacy Statement</a></p>
+          <input type="submit" value="Sign up">
+       </form>
+       <p>Invisible reCAPTCHA by Google <a href="#">Privacy Policy</a> and <a href="#">Terms of use</a></p>
+
+    </div>
+</body>
+</html>
+<script>
+
+    function handleForm(){
+        event.preventDefault();
+        //alert("working")
+        let email=document.querySelector("#email").value 
+        let username=document.querySelector("#username").value 
+       let password=document.querySelector("#password").value 
+       console.log(email,username,password)
+
+       let bag=JSON.parse(localStorage.getItem("Signup-details"))||[]
+       let obj={ email,
+            username,
+            password           
+        }       
+        localStorage.setItem("Signup-details",JSON.stringify(obj))
+    }
+
+
+
+</script>
