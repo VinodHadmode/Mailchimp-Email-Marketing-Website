@@ -11,8 +11,9 @@ nav {
     text-align: center;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    height: 80px;
+    height: 100px;
     width: 100%;
+    overflow: hidden;
 }
 
 .sticky {
@@ -94,7 +95,6 @@ nav>ul>li>a:hover {
 
 }
 
-
 .email-revenue>div {
     width: 700px;
     margin: auto;
@@ -115,7 +115,6 @@ nav>ul>li>a:hover {
 
 .image-container>div>a {
     font-size: 30px;
-    text-decoration: underline;
 }
 
 .image-container>div>img {
@@ -127,6 +126,13 @@ nav>ul>li>a:hover {
     text-align: left;
     border: 1px solid black;
     padding: 20px;
+    transition: transform .1s;
+
+}
+
+.image-container>div>img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .image-container>div:nth-child(1) {
@@ -174,6 +180,10 @@ nav>ul>li>a:hover {
     margin-top: 20px;
     padding: 10px;
     font-size: 20px;
+    transition: transform .2s;
+}
+.right-plan button:hover{
+    transform: scale(1.02);
 }
 
 #plan-cards {
@@ -241,12 +251,13 @@ nav>ul>li>a:hover {
 }
 
 .learnmorebtn {
-    border-radius: 10px;
+    border-radius: 15px;
     border: none;
     background-color: white;
     margin-top: 20px;
-    padding: 7px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 15px;
+    transition: transform .2s;
 
 }
 
@@ -254,6 +265,7 @@ nav>ul>li>a:hover {
     background-color: yellow;
     box-shadow: 0 5px;
     cursor: pointer;
+    transform: scale(1.03);
 }
 
 /* for second container */
@@ -335,6 +347,7 @@ nav>ul>li>a:hover {
     display: list-item;
 }
 
+/* footer style  */
 .footer {
     background-color: rgb(241, 183, 116);
 

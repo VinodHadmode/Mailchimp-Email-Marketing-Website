@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing page</title>
+    <!-- <link rel="stylesheet" href="./pricing.css"> -->
+    <!-- <script src="./pricing.js"></script> -->
     <style>
         * {
             margin: 0;
@@ -80,7 +82,7 @@
         }
 
         .loginbtn:hover {
-            box-shadow: 0 5px;
+            box-shadow: 0 3px;
         }
 
         .signupbtn {
@@ -94,7 +96,7 @@
         }
 
         .signupbtn:hover {
-            box-shadow: 0 5px;
+            box-shadow: 0 3px;
 
         }
 
@@ -120,7 +122,7 @@
 
         }
 
-        .card-container {
+        .right-plan {
             margin-top: 20px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -164,8 +166,223 @@
             height: 40px;
             width: 100px;
         }
-        .cards h4{
+
+        .cards h4 {
             margin-top: 10px;
+        }
+
+        .comparebtn {
+            padding: 8px;
+            border-radius: 15px;
+            background-color: white;
+            border: 1px solid black;
+            font-size: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            margin: 30px auto;
+        }
+
+        .comparebtn:hover {
+            box-shadow: 0 5px;
+        }
+
+        .features {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        }
+
+        .features div {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+            padding: 10px;
+        }
+
+        .fbtn {
+            padding: 5px;
+            border-radius: 12px;
+            background-color: white;
+            border: 1px solid black;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .fbtn:hover {
+            box-shadow: 0 2px;
+        }
+
+        /* accordion style  */
+        #faq-head {
+            margin: 30px 35px;
+            text-align: left;
+        }
+
+        .accordion {
+            width: 90%;
+            max-width: 1000px;
+            margin: 2rem, auto;
+            margin: auto;
+        }
+
+        .accordion-items {
+            margin: 10px 0;
+            border: 1px solid gray;
+        }
+
+        .accordion-item-header {
+            padding: 0.5rem, 3rem, 0.5rem, 1rem;
+            min-height: 3.5rem;
+            line-height: 1.25rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .accordion-item-header::after {
+            content: "\002B";
+            font-size: 20px;
+            position: absolute;
+            right: 1rem;
+        }
+
+        .accordion-item-header.active::after {
+            content: "\2212";
+        }
+
+        .accordion-item-body {
+            max-height: 0;
+            overflow: hidden;
+
+        }
+
+        .accordion-item-body-content {
+            padding: 1rem;
+            line-height: 1.5rem;
+        }
+
+        .accordion-item-header.active+.accordion-item-body {
+
+            max-height: 1000px;
+        }
+
+        /* partener style  */
+        #partner-head {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .partner {
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+        .partner>img {
+            width: 50%;
+        }
+
+        /* footer style  */
+
+        .footer {
+            background-color: rgb(241, 183, 116);
+            margin-top: 30px;
+
+        }
+
+        .footer1 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .footer a {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .footer2 {
+            margin: 10px 20px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 20px;
+        }
+
+        .footer2 img {
+            width: 100%;
+        }
+
+        .checkbtn {
+            padding: 10px;
+            background-color: rgb(241, 183, 116);
+            border: none;
+            margin-top: 10px;
+            font-size: 18px;
+            color: black;
+        }
+
+        .checkbtn:hover {
+            border-radius: 15px;
+            box-shadow: 0 5px;
+            background-color: rgb(245, 245, 35);
+
+        }
+
+        .footer3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+            margin-top: 30px;
+        }
+
+        .footer3>div>img {
+            width: 40%;
+        }
+
+        .wrapper {
+            /* margin-left: -50px; */
+            display: flex;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 10px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .fa:hover {
+            /* opacity: ; */
+            /* background-color: #3B5998; */
+            color: rgb(44, 41, 238);
+        }
+
+        #Multi-lang {
+            width: 100px;
+            height: 30px;
+        }
+
+        #Multi-lang+p {
+            margin-top: 20px;
+        }
+
+        .footer>hr {
+            height: 1px;
+            border-width: 0;
+            color: rgb(19, 18, 18);
+            background-color: gray
         }
     </style>
 </head>
@@ -203,117 +420,397 @@
                 <option value="2500">2500</option>
                 <option value="5000">5000</option>
 
-            </select> </p>
+            </select>
+        </p>
+    </div>
+    <div id="head">
+        <h1>Find the right plan</h1>
     </div>
     <div class="right-plan">
-        <div id="head">
-            <h1>Find the right plan</h1>
+        <!-- append your cards here  -->
+    </div>
+
+    <button class="comparebtn">Compare all features</button>
+
+    <div class="features">
+        <div>
+            <h3>Also included: Free tools for getting your business online</h3><br>
+            <p>All Marketing plans come with Free website and commerce features, so you can build your dream online
+                presence. But if you want more advanced tools for selling and scheduling, try combining your Marketing
+                plan with a paid Websites & Commerce plan.</p><br>
+            <button class="fbtn">See Websites $ commerce plans</button>
+        </div>
+        <div>
+            <h3>Prefer to pay as you go?</h3><br>
+            <p>Instead of paying a monthly recurring charge, you can buy email credits as needed through our Pay As You
+                Go plan. It's best for infrequent senders.</p><br>
+            <button class="fbtn">Learn More</button>
+        </div>
+        <div>
+            <h3>Two-factor authentication discount</h3><br>
+            <p>At Mailchimp, we’re serious about security. We offer a 10% discount for 1 month when you add two-factor
+                authentication to your Mailchimp account with an app like Google Authenticator or SMS two-factor
+                authentication.</p><br>
+            <button class="fbtn">Get started</button>
+        </div>
+        <div>
+            <h3>Rates for nonprofits and charitie</h3><br>
+            <p>Mailchimp offers a 15% discount to nonprofits and charities. To request the discount, sign up for a free
+                account, and contact our Billing team with your username and a link to your organization website.</p>
+            <br>
+            <button class="fbtn">Get started</button>
         </div>
     </div>
 
+    <h1 id="faq-head">FAQs</h1>
+    <div class="accordion">
+        <div class="accordion-items">
+            <div class="accordion-item-header">
+                What payment methods do you offer?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    We accept all major credit cards, PayPal, and (in select countries) direct debit. We also support
+                    transactions in a range of currencies.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-items">
+            <div class="accordion-item-header">
+                How do I switch to different plan?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    You can switch to a new plan at any time by going to the Billing page in your account. Select the
+                    plan you’d like to switch to and immediately start using new features.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-items">
+            <div class="accordion-item-header">
+                Can I buy instead?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    Yes. If you send emails infrequently and prefer to pay as you go, you can buy email credits as an
+                    alternative to a monthly plan.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-items">
+            <div class="accordion-item-header">
+                Do you have pricing for high volume email senders?
+            </div>
+            <div class="accordion-item-body">
+                <div class="accordion-item-body-content">
+                    We do indeed. If you have more than 200,000 contacts, we have a high-volume plan that can meet your
+                    needs.
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 id="partner-head">You will be in good company</h1>
+    <div class="partner">
+        <img src="https://eep.io/images/yzco4xsimv0y/6EIjMFs2ZyQWsmOOYc4cGe/19d62aa558c8f5d4c4bf222e7e36571b/EastFork.png?w=260&fm=webp&q=70"
+            alt="">
+        <img src="https://eep.io/images/yzco4xsimv0y/5Z9C7t0HDyyaWu60iWE00A/2e3d2eaa056d0d86c6712c88d239762f/chronicle-books-logo.jpg?w=260&fm=webp&q=70"
+            alt="">
+        <img src="https://eep.io/images/yzco4xsimv0y/vHWiUSlrS8sSQc0cCesGY/429d539471239d6ffcdb8be8767140cb/Fader-Logo-800px-144dpi.jpg?w=260&fm=webp&q=70"
+            alt="">
+        <img src="https://eep.io/images/yzco4xsimv0y/2fZXnWbDK8ugIaCW8Qus0i/1b8f1c4aa80dda874418e4bfa29b60e5/Sweat.png?w=260&fm=webp&q=70"
+            alt="">
+    </div>
 
+    <!-- footer form here  -->
+    <div class="footer">
+        <div class="footer1">
+            <h4>Related Links:</h4>
+            <a href="#">How to build a great website</a> <br>
+            <a href="#">Start an online ecommerce website</a><br>
+            <a href="#">How to sell anything to audiance</a>
+        </div>
+        <hr>
+        <div class="footer2">
+            <div>
+                <h4>Products</h4><br>
+                <a href="#">Why mailchimp</a><br><br>
+                <a href="#">products</a><br><br>
+                <a href="#">updates</a><br><br>
+                <a href="#">Email marketing</a><br><br>
+                <a href="#">Security</a><br><br>
+                <a href="#">Websites</a><br><br>
+                <a href="#">Compare</a><br><br>
+                <a href="#">Mobile app</a><br><br>
+                <a href="#">GDPR</a><br><br>
+                <a href="#">Status</a>
+
+            </div>
+            <div>
+                <h4>Resources</h4><br>
+                <a href="#">Marketing library</a><br><br>
+                <a href="#">Tools</a><br><br>
+                <a href="#">Grossary</a><br><br>
+                <a href="#">Free marketing</a><br>
+                <a href="#">updates</a><br>
+
+
+            </div>
+            <div>
+                <h4>Community</h4><br>
+                <a href="#">Agencies & freelancer</a><br><br>
+                <a href="#">Developers</a><br><br>
+                <a href="#">Events</a>
+            </div>
+            <div>
+                <h4>Company</h4><br>
+                <a href="#">Our Story</a><br><br>
+                <a href="#">Newsroom</a><br><br>
+                <a href="#">Annual</a><br><br>
+                <a href="#">Careers</a><br>
+                <a href="#">Accessibility</a>
+
+            </div>
+            <div>
+                <h4>Help</h4><br>
+                <a href="#">Contact us</a><br><br>
+                <a href="#">Hire an expert</a><br><br>
+                <a href="#">Help center</a><br><br>
+                <a href="#">Talk to sales</a>
+            </div>
+            <div>
+                <img src="https://eep.io/images/yzco4xsimv0y/73ZAoe8O3Y7SXQLeCNTq5u/8ddf1f63b4abdf7f67149d3a9d74a0bd/MCP.svg?w=260&fm=webp&q=80"
+                    alt="">
+                <p>Films, podcasts, and original series that celebrate the entrepreneurial spirit.</p>
+                <button class="checkbtn">Check it Now ></button>
+
+            </div>
+        </div>
+        <hr>
+        <div class="footer3">
+            <div class="store">
+                <img class="play-store" src="https://assets.stickpng.com/images/5a902db97f96951c82922874.png"
+                    alt=""><br>
+                <img class="play-store"
+                    src="https://www.freepnglogos.com/uploads/google-play-png-logo/new-get-it-on-google-play-png-logo-20.png"
+                    alt="">
+            </div>
+            <div class="wrapper">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+
+            <div>
+                <select name="" id="Multi-lang">
+                    <option value="">English</option>
+                    <option value="">Espanol</option>
+                    <option value="">Francias</option>
+                    <option value="">Portugise</option>
+                    <option value="">Italian</option>
+
+                </select>
+                <p>©2001-2022 All Rights Reserved. Mailchimp® is a registered trademark of The Rocket Science Group.
+                    Apple and the Apple logo are trademarks of Apple Inc. Mac App Store is a service mark of Apple
+                    Inc. Google Play and the Google Play logo are trademarks of Google Inc</p>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Cookie Preferances</a>
+            </div>
+
+        </div>
 
 </body>
 
 </html>
+
+
+
+
 <script>
 
     let pricing = [
         {
             title: "Premium",
             description: "Our most advanced tools, unlimited contacts, and priority support; built for teams.",
-            price: {
-                p1: 23000,
-                p2: 23000,
-                p3: 23000,
-                p4: 23000
-            },
-            benifits: {
-                Monthly_Email:{
-                    e1:150000,
-                    e2:150000,
-                    e3:150000,
-                    e4:150000
-                },
-                Maximum_contacts: "Unlimited",
-                Users: "Unlimited",
-            }
+            price: 23000,
+            Monthly_Email: 150000,
+            Maximum_contacts: "Unlimited",
+            Users: "Unlimited",
+            contact: 500
+
 
         },
         {
             title: "Standerd",
             description: "Sell even more with personalization, optimization tools, and enhanced automations.",
-            price: {
-                p1:1150,
-                p2:3850,
-                p3:3850,
-                p4:5800
-            },
-            benifits: {
-                Monthly_Email: {
-                    e1:6000,
-                    e2:30000,
-                    e3:30000,
-                    e4:60000
-                },
-                Maximum_contacts: 100000,
-                Users: "5 Seats",
-            }
-
+            price: 1150,
+            Monthly_Email: 6000,
+            Maximum_contacts: 100000,
+            Users: "5 Seats",
+            contact: 500
         },
         {
             title: "Essentials",
             description: "Send the right content at the right time with testing and scheduling features.",
-            price: {
-                p1:770,
-                p2:1500,
-                p3:2300,
-                p4:3850
-            },
-            benifits: {
-                Monthly_Email: {
-                    e1:5000,
-                    e2:15000,
-                    e3:25000,
-                    e4:50000
-                },
-                Maximum_contacts: 50000,
-                Users: "3 Seats",
-            }
+            price: 770,
+            Monthly_Email: 5000,
+            Maximum_contacts: 50000,
+            Users: "3 Seats",
+            contact: 500
+
         },
         {
             title: "Free",
             description: "Easily create email campaigns and learn more about your customers",
-            price: {
-                p1:0,
-                p2:"contact limit exceded",
-                p3:"contact limit exceded",
-                p4:"contact limit exceded"
-            },
-            benifits: {
-                Monthly_Email: {
-                    e1:2500,
-                    e2:"limit over",
-                    e3:"limit over",
-                    e4:"limit over"
-                },
-                Maximum_contacts: 500,
-                Users: "1 Seats",
-            }
+            price: 0,
+            Monthly_Email: 2500,
+            Maximum_contacts: 500,
+            Users: "1 Seats",
+            contact: 500
+        },
+        //for 1500
+        {
+            title: "Premium",
+            description: "Our most advanced tools, unlimited contacts, and priority support; built for teams.",
+            price: 23000,
+            Monthly_Email: 150000,
+            Maximum_contacts: "Unlimited",
+            Users: "Unlimited",
+            contact: 1500
+        },
+        {
+            title: "Standerd",
+            description: "Sell even more with personalization, optimization tools, and enhanced automations.",
+            price: 3850,
+            Monthly_Email: 30000,
+            Maximum_contacts: 100000,
+            Users: "5 Seats",
+            contact: 1500
+        },
+        {
+            title: "Essentials",
+            description: "Send the right content at the right time with testing and scheduling features.",
+            price: 1500,
+            Monthly_Email: 15000,
+            Maximum_contacts: 50000,
+            Users: "3 Seats",
+            contact: 1500
+        },
+        {
+            title: "Free",
+            description: "Easily create email campaigns and learn more about your customers",
+            price: "You have selected more contacts than plan allows",
+            Monthly_Email: "-limit-",
+            Maximum_contacts: 500,
+            Users: "1 Seats",
+            contact: 1500
+        },
+        //for 2500
+        {
+            title: "Premium",
+            description: "Our most advanced tools, unlimited contacts, and priority support; built for teams.",
+            price: 23000,
+            Monthly_Email: 150000,
+            Maximum_contacts: "Unlimited",
+            Users: "Unlimited",
+            contact: 2500
+
+
+        },
+        {
+            title: "Standerd",
+            description: "Sell even more with personalization, optimization tools, and enhanced automations.",
+            price: 3850,
+            Monthly_Email: 30000,
+            Maximum_contacts: 100000,
+            Users: "5 Seats",
+            contact: 2500
+        },
+        {
+            title: "Essentials",
+            description: "Send the right content at the right time with testing and scheduling features.",
+            price: 2300,
+            Monthly_Email: 25000,
+            Maximum_contacts: 50000,
+            Users: "3 Seats",
+            contact: 2500
+
+        },
+        {
+            title: "Free",
+            description: "Easily create email campaigns and learn more about your customers",
+            price: "You have selected more contacts than plan allows",
+            Monthly_Email: "-limit-",
+            Maximum_contacts: 500,
+            Users: "1 Seats",
+            contact: 2500
+        },
+
+        //5000
+        {
+            title: "Premium",
+            description: "Our most advanced tools, unlimited contacts, and priority support; built for teams.",
+            price: 23000,
+            Monthly_Email: 150000,
+            Maximum_contacts: "Unlimited",
+            Users: "Unlimited",
+            contact: 5000
+
+
+        },
+        {
+            title: "Standerd",
+            description: "Sell even more with personalization, optimization tools, and enhanced automations.",
+            price: 5800,
+            Monthly_Email: 60000,
+            Maximum_contacts: 100000,
+            Users: "5 Seats",
+            contact: 5000
+        },
+        {
+            title: "Essentials",
+            description: "Send the right content at the right time with testing and scheduling features.",
+            price: 3850,
+            Monthly_Email: 50000,
+            Maximum_contacts: 50000,
+            Users: "3 Seats",
+            contact: 5000
+
+        },
+        {
+            title: "Free",
+            description: "Easily create email campaigns and learn more about your customers",
+            price: "You have selected more contacts than plan allows",
+            Monthly_Email: "-limit-",
+            Maximum_contacts: 500,
+            Users: "1 Seats",
+            contact: 5000
         }
+
     ]
 
     localStorage.setItem("Subscription-details", JSON.stringify(pricing))
 
-  
+
+
+    function handleFilter() {
+        let selected = document.querySelector("#selected").value
+        let filteredData = pricing.filter(function (element) {
+            return element.contact == selected
+        })
+        displayTable(filteredData)
+        console.log(filteredData)
+    }
+
     displayTable(pricing)
+
 
     function displayTable(data) {
 
-        data.forEach(function (element,i) {
-            let carddiv = document.createElement("div");
-            carddiv.setAttribute("class", "card-container")
-
+        document.querySelector(".right-plan").innerHTML = ""
+        data.forEach(function (element) {
 
             let div = document.createElement("div");
             div.setAttribute("class", "cards")
@@ -324,12 +821,12 @@
             let description = document.createElement("p")
             description.innerText = element.description
 
-            
+
             let price = document.createElement("h4")
-            price.innerHTML = "Price:&nbsp" + element.price.p1 + "<br>per month"
+            price.innerHTML = "Price:&nbsp" + element.price + "<br>per month"
 
             let button = document.createElement("button")
-            if (element.price == 0) {
+            if (element.price == 0 || element.price == "You have selected more contacts than plan allows") {
                 button.innerText = "Sign up Free"
             }
             else {
@@ -337,15 +834,22 @@
             }
 
             let benifits = document.createElement("p")
-            benifits.innerText = "monthly email:" + element.benifits.Monthly_Email.e1
+            benifits.innerText = "monthly email:" + element.Monthly_Email
 
 
 
             div.append(title, description, price, benifits, button)
-            document.querySelector(".right-plan").append(carddiv)
-            document.querySelector(".card-container").append(div)
+            document.querySelector(".right-plan").append(div)
 
         });
-
     }
+
+    //script for accordion
+    let accordionItemHeader = document.querySelectorAll(".accordion-item-header");
+    accordionItemHeader.forEach(accordionItemHeader => {
+        accordionItemHeader.addEventListener("click", event => {
+
+            accordionItemHeader.classList.toggle("active");
+        });
+    });
 </script>
