@@ -10,7 +10,7 @@
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         .signup-box{
-            width: fit-content;
+            width: 70%;
             height: 700px;
             margin: auto;
         }
@@ -35,6 +35,10 @@
             font-weight: bold;
             background-color: rgb(19, 134, 155);
             color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover{
+            background-color: cadetblue;
         }
        
     </style>
@@ -43,7 +47,7 @@
 <body>
     <div class="signup-box">
        <h1>Sign up for mailchimp</h1> 
-       <p>Create a free account or <a href="#">log in</a></p>
+       <p>Create a free account or <a href="./login.html">log in</a></p>
        <form onsubmit="handleForm()">
           <label>Email</label>
           <input type="email" id="email">
@@ -51,7 +55,7 @@
           <input type="text" id="username">
           <label>Password</label>
           <input type="password" id="password">
-          <p><input type="checkbox">By creating an account, you agree to our <a href="#">Terms </a> and have read and acknowledge the <a href="#">Global Privacy Statement</a></p>
+          <p>By creating an account, you agree to our <a href="#">Terms </a> and have read and acknowledge the <a href="#">Global Privacy Statement</a></p>
           <input type="submit" value="Sign up">
        </form>
        <p>Invisible reCAPTCHA by Google <a href="#">Privacy Policy</a> and <a href="#">Terms of use</a></p>
@@ -63,7 +67,7 @@
 
     function handleForm(){
         event.preventDefault();
-        //alert("working")
+        
         let email=document.querySelector("#email").value 
         let username=document.querySelector("#username").value 
        let password=document.querySelector("#password").value 
@@ -75,6 +79,7 @@
             password           
         }       
         localStorage.setItem("Signup-details",JSON.stringify(obj))
+        alert("Created account successfully")
     }
 
 

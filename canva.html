@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+
+        }
+
+        nav {
+            text-align: center;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            height: 100px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+        }
+
+        .left {
+            float: left;
+            margin-left: 20px;
+        }
+
+        .right {
+            float: right;
+            margin-right: 20px;
+        }
+
+        .right>li>a:hover {
+            text-decoration: underline;
+        }
+
+        nav>ul>li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0px 5px;
+        }
+
+        nav>ul>li>a {
+            color: black;
+            font-size: 20px;
+        }
+
+        nav>ul>li>a:hover {
+            color: rgb(10, 169, 231);
+        }
+
+        .right>li~button {
+            margin: 0px 10px;
+        }
+
+        .checkbtn {
+            font-size: 20px;
+            color: rgb(214, 24, 24);
+            float: right;
+
+        }
+
+        .loginbtn {
+            padding: 10px;
+            border-radius: 15px;
+            background-color: rgb(230, 230, 23);
+            font-size: 15px;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+
+        .loginbtn:hover {
+            box-shadow: 0 5px;
+        }
+
+        .signupbtn {
+            padding: 10px;
+            border-radius: 15px;
+            background-color: rgb(230, 230, 23);
+            border: 1px solid black;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .signupbtn:hover {
+            box-shadow: 0 5px;
+
+        }
+
+        /* navbar ends  */
+
+        .canva-container {
+            width: 80%;
+            display: grid;
+            margin: 200px auto;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 100px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .canva-container a {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .canva-container>div button {
+            margin-top: 10px;
+            padding: 15px;
+            border-radius: 30px;
+            background-color: rgb(230, 230, 23);
+            font-size: 15px;
+            cursor: pointer;
+            border: 1px solid black;
+
+        }
+
+        .canva-container>div button:hover {
+            box-shadow: 0 3px;
+            transform: scale(1.03);
+
+        }
+
+        table,
+        th,
+        td {
+
+            padding: 10px;
+        }
+
+        .details {
+            display: flex;
+            margin: auto;
+            width: 70%;
+            font-size: 20px;
+        }
+
+        .images {
+            display: block;
+            width: 70%;
+            margin: 50px auto;
+            font-size: 20px;
+        }
+
+        .images img {
+            width: 100%;
+        }
+
+        /* footer style  */
+        .footer {
+            background-color: rgb(206, 204, 203);
+
+        }
+
+        .footer1 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .footer a {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .footer2 {
+            margin: 10px 20px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 20px;
+        }
+
+        .footer2 img {
+            width: 100%;
+        }
+
+        .checkbtn {
+            padding: 10px;
+            background-color: rgb(241, 183, 116);
+            border: none;
+            margin-top: 10px;
+            font-size: 18px;
+            color: black;
+        }
+
+        .checkbtn:hover {
+            border-radius: 15px;
+            box-shadow: 0 5px;
+            background-color: rgb(245, 245, 35);
+
+        }
+
+        .footer3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+            margin-top: 30px;
+        }
+
+        .footer3>div>img {
+            width: 40%;
+        }
+
+        .wrapper {
+            /* margin-left: -50px; */
+            display: flex;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 10px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .fa:hover {
+            /* opacity: ; */
+            /* background-color: #3B5998; */
+            color: rgb(44, 41, 238);
+        }
+
+        #Multi-lang {
+            width: 100px;
+            height: 30px;
+        }
+
+        #Multi-lang+p {
+            margin-top: 20px;
+        }
+
+        .footer>hr {
+            height: 1px;
+            border-width: 0;
+            color: rgb(19, 18, 18);
+            background-color: gray
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <nav class="sticky">
+
+            <ul class="left">
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+            <img id="searchicon" src="" alt="">
+            <ul class="right">
+                <li><a href="#">Sales:<a href="">+11(800)23456789</a></a></li>
+                <a href="./login.html" class="loginbtn">Log In</a>
+                <a href="./signup.html" class="signupbtn">Sign Up</a>
+            </ul>
+        </nav>
+
+        <div class="canva-container">
+            <div>
+                <a href="#">INTEGRATION</a>
+                <h2>Canva</h2>
+                <p>The easiest way to create stunning graphics for your newsletter. Made with the non-designer in mind.
+                </p>
+                <button>Design Now</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Cost</td>
+                            <td>Developer</td>
+                            <td>Languages</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Free</td>
+                            <td>Canva</td>
+                            <td>100+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <img src="https://eep.io/images/yzco4xsimv0y/4ktvkEPJ0SChqP69iZB4xR/85f99299f450eef01ef9f9ae50cceabc/Untitled_design.png?w=300&fm=webp&q=70"
+                    alt="">
+            </div>
+        </div>
+
+        <div class="details">
+            <p> <b>L</b>iven up your newsletter with eye-catching, on
+                brand graphics. No design skills? No problem. With Canva
+                anybody can create stunning graphics-for free.
+
+                <br> Canvas templates are your shortcut to great design. And our simple drag-and-drop tools make it easy
+                for
+                you to customize a template until you get exactly the look you need.
+
+                <br><br>
+                With over 2 million stock photos right inside our platform, plus thousands of templates for every kind
+                of design, its easy to create graphics that impress.
+
+                Create logos, banners, social media graphics, infographics and more
+
+                GIF and video maker
+
+                Collaborate with your team
+
+                Completely online, no downloads required
+
+                2 million+ stock images, or upload your own images for free
+                <br><br>
+
+                <b>How it works:</b><br>
+
+                Step 1 -Create a graphic <br>
+
+                To get started, log in or sign up to Canva. Choose what kind of design youd like to create, then select
+                a template. Customize until youve got the look you want.<br><br>
+
+                <b>Step 2 - Publish to Mailchimp</b><br>
+
+                When youre happy with your graphic, click the white button in the top corner to choose your publishing
+                option. Then select Mailchimp.<br><br>
+
+                <b>Step 3 -Connect your Mailchimp account</b><br>
+
+                If this is the first time youve published to Mailchimp, youll be prompted to connect your Canva account
+                to your Mailchimp account. Add your Mailchimp username and password to connect <br><br>
+
+                <b>Step 4- Add your graphic to your newsletter</b><br>
+
+                To add your graphic to your newsletter, open Mailchimp and navigate to the Content section. Youll find
+                your graphic under My Files.
+            </p>
+        </div>
+
+        <div class="images">
+            <h2>Additional Resources</h2>
+            <a href="#">How to:Save Designs to mailchimp</a>
+            <a href="#">How to:Connect or Disconnect Canva</a>
+            <h2>Support</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum unde, illum, quibusdam itaque officiis quas
+                nemo reiciendis tenetur ab repudiandae in a vitae tempore illo fuga, sequi saepe recusandae deserunt.
+            </p>
+            <img src="https://eep.io/images/yzco4xsimv0y/1mDiYaut3UkLv5eIUatsPE/e8219b1fcb79391991e034811d1b8f5f/Canva_Asset_1.png?w=980&fm=webp&q=80"
+                alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, facilis!</p>
+            <img src="https://eep.io/images/yzco4xsimv0y/1mDiYaut3UkLv5eIUatsPE/e8219b1fcb79391991e034811d1b8f5f/Canva_Asset_1.png?w=980&fm=webp&q=80"
+                alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, facilis!</p>
+            <img src="https://eep.io/images/yzco4xsimv0y/3WIxesQMcaj9BWCXYkaRXz/2301b9e31536727f23e2ab812c8d8652/Canva_Asset_2.png?w=980&fm=webp&q=80"
+                alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, facilis!</p>
+
+
+
+        </div>
+
+        <!-- footer  -->
+
+        <div class="footer">
+            <div class="footer1">
+                <h4>Related Links:</h4>
+                <a href="#">How to build a great website</a> <br>
+                <a href="#">Start an online ecommerce website</a><br>
+                <a href="#">How to sell anything to audiance</a>
+            </div>
+            <hr>
+            <div class="footer2">
+                <div>
+                    <h4>Products</h4><br>
+                    <a href="#">Why mailchimp</a><br><br>
+                    <a href="#">products</a><br><br>
+                    <a href="#">updates</a><br><br>
+                    <a href="#">Email marketing</a><br><br>
+                    <a href="#">Security</a><br><br>
+                    <a href="#">Websites</a><br><br>
+                    <a href="#">Compare</a><br><br>
+                    <a href="#">Mobile app</a><br><br>
+                    <a href="#">GDPR</a><br><br>
+                    <a href="#">Status</a>
+
+                </div>
+                <div>
+                    <h4>Resources</h4><br>
+                    <a href="#">Marketing library</a><br><br>
+                    <a href="#">Tools</a><br><br>
+                    <a href="#">Grossary</a><br><br>
+                    <a href="#">Free marketing</a><br>
+                    <a href="#">updates</a><br>
+
+
+                </div>
+                <div>
+                    <h4>Community</h4><br>
+                    <a href="#">Agencies & freelancer</a><br><br>
+                    <a href="#">Developers</a><br><br>
+                    <a href="#">Events</a>
+                </div>
+                <div>
+                    <h4>Company</h4><br>
+                    <a href="#">Our Story</a><br><br>
+                    <a href="#">Newsroom</a><br><br>
+                    <a href="#">Annual</a><br><br>
+                    <a href="#">Careers</a><br>
+                    <a href="#">Accessibility</a>
+
+                </div>
+                <div>
+                    <h4>Help</h4><br>
+                    <a href="#">Contact us</a><br><br>
+                    <a href="#">Hire an expert</a><br><br>
+                    <a href="#">Help center</a><br><br>
+                    <a href="#">Talk to sales</a>
+                </div>
+                <div>
+                    <img src="https://eep.io/images/yzco4xsimv0y/73ZAoe8O3Y7SXQLeCNTq5u/8ddf1f63b4abdf7f67149d3a9d74a0bd/MCP.svg?w=260&fm=webp&q=80"
+                        alt="">
+                    <p>Films, podcasts, and original series that celebrate the entrepreneurial spirit.</p>
+                    <button class="checkbtn">Check it Now ></button>
+
+                </div>
+            </div>
+            <hr>
+            <div class="footer3">
+                <div class="store">
+                    <img class="play-store" src="https://assets.stickpng.com/images/5a902db97f96951c82922874.png"
+                        alt=""><br>
+                    <img class="play-store"
+                        src="https://www.freepnglogos.com/uploads/google-play-png-logo/new-get-it-on-google-play-png-logo-20.png"
+                        alt="">
+                </div>
+                <div class="wrapper">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+
+                <div>
+                    <select name="" id="Multi-lang">
+                        <option value="">English</option>
+                        <option value="">Espanol</option>
+                        <option value="">Francias</option>
+                        <option value="">Portugise</option>
+                        <option value="">Italian</option>
+
+                    </select>
+                    <p>©2001-2022 All Rights Reserved. Mailchimp® is a registered trademark of The Rocket Science Group.
+                        Apple and the Apple logo are trademarks of Apple Inc. Mac App Store is a service mark of Apple
+                        Inc. Google Play and the Google Play logo are trademarks of Google Inc</p>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookie Preferances</a>
+                </div>
+
+            </div>
+
+        </div>
+</body>
+
+</html>
