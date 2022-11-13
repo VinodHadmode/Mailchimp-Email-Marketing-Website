@@ -11,8 +11,10 @@ nav {
     text-align: center;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    height: 100px;
+    height: 80px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     overflow: hidden;
 }
 
@@ -24,6 +26,31 @@ nav {
 .left {
     float: left;
     margin-left: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+}
+
+.logo>img {
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+
+}
+
+.search-icon {
+    display: flex;
+    justify-content: right;
+    /* border: 1px solid red; */
+    margin-right: -200px;
+}
+
+.search-icon>img {
+    width: 100%;
+    height: 80px;
+    padding: 22px;
 }
 
 .right {
@@ -63,7 +90,7 @@ nav>ul>li>a:hover {
 
 .loginbtn {
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 20px;
     background-color: rgb(230, 230, 23);
     font-size: 15px;
     cursor: pointer;
@@ -72,11 +99,12 @@ nav>ul>li>a:hover {
 
 .loginbtn:hover {
     box-shadow: 0 5px;
+    transform: scale(1);
 }
 
 .signupbtn {
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 20px;
     background-color: rgb(230, 230, 23);
     border: 1px solid black;
     font-size: 15px;
@@ -84,16 +112,13 @@ nav>ul>li>a:hover {
 }
 
 .signupbtn:hover {
-    box-shadow: 0 5px;
-
-}
-
-#searchicon {
-    /* width: 5%;
-    height: 10px; */
+    box-shadow: 0 4px;
+    transform: scale(1.05);
 
 
 }
+
+/* navbar styling done  */
 
 .email-revenue>div {
     width: 700px;
@@ -149,19 +174,38 @@ nav>ul>li>a:hover {
     margin-top: 20px;
 }
 
+.learn-more:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px;
+    background-color: yellow;
+
+}
+
 .video-container {
     background-color: rgb(48, 45, 45);
 }
 
 .video-container>div {
     width: 60%;
+    display: block;
     margin: auto;
+    padding: 50px;
+
+}
+
+.video-container div>video {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 110%;
+
+
 }
 
 .video-container>div>p {
     color: white;
     font-size: 30px;
-    padding: 30px;
     text-align: center;
 }
 
@@ -182,7 +226,8 @@ nav>ul>li>a:hover {
     font-size: 20px;
     transition: transform .2s;
 }
-.right-plan button:hover{
+
+.right-plan button:hover {
     transform: scale(1.02);
 }
 
@@ -206,7 +251,7 @@ nav>ul>li>a:hover {
 }
 
 .generate-4x {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .subdiv {
@@ -222,7 +267,7 @@ nav>ul>li>a:hover {
 }
 
 #animated {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 400px;
 }
 
@@ -282,11 +327,11 @@ nav>ul>li>a:hover {
 }
 
 .Get88 {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 #animated2 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 400px;
 }
 
@@ -318,7 +363,7 @@ nav>ul>li>a:hover {
 }
 
 .social-media {
-    margin-top: 30px;
+    margin-top: 50px;
 
 }
 
@@ -437,3 +482,45 @@ nav>ul>li>a:hover {
     color: rgb(19, 18, 18);
     background-color: gray
 }
+
+/* media query starts  */
+
+@media (min-width: 30em) and (max-width: 70em) {
+   
+    .image-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+    }
+    #plan-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    
+    }
+    .subdiv {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    
+    }
+    .subdiv2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    
+    }
+    .social-media-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+    .search-icon{
+        display: none;
+    }
+    .right li{
+        display: none;
+    }
+    .right>a{
+        display: none;
+    }
+  }

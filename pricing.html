@@ -15,12 +15,16 @@
             box-sizing: border-box;
         }
 
+
         nav {
             text-align: center;
             background-color: white;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
             height: 80px;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
         }
 
         .sticky {
@@ -31,6 +35,31 @@
         .left {
             float: left;
             margin-left: 20px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: left;
+        }
+
+        .logo>img {
+            width: 100%;
+            height: 80px;
+            padding: 5px;
+
+        }
+
+        .search-icon {
+            display: flex;
+            justify-content: right;
+            /* border: 1px solid red; */
+            margin-right: -200px;
+        }
+
+        .search-icon>img {
+            width: 100%;
+            height: 80px;
+            padding: 22px;
         }
 
         .right {
@@ -51,8 +80,6 @@
         nav>ul>li>a {
             color: black;
             font-size: 20px;
-            text-decoration: none;
-
         }
 
         nav>ul>li>a:hover {
@@ -72,44 +99,35 @@
 
         .loginbtn {
             padding: 10px;
-            border-radius: 15px;
+            border-radius: 20px;
             background-color: rgb(230, 230, 23);
             font-size: 15px;
             cursor: pointer;
             border: 1px solid black;
-            text-decoration: none;
-
         }
 
         .loginbtn:hover {
-            box-shadow: 0 3px;
+            box-shadow: 0 5px;
+            transform: scale(1.05);
+
         }
 
         .signupbtn {
             padding: 10px;
-            border-radius: 15px;
+            border-radius: 20px;
             background-color: rgb(230, 230, 23);
             border: 1px solid black;
             font-size: 15px;
             cursor: pointer;
-            text-decoration: none;
         }
 
         .signupbtn:hover {
-            box-shadow: 0 3px;
+            box-shadow: 0 4px;
+            transform: scale(1.05);
+
 
         }
 
-        .options {
-            margin-top: 120px;
-            font-size: 20px;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .options>p:hover {
-            color: rgb(75, 189, 189);
-        }
 
         #head {
             display: flex;
@@ -384,6 +402,30 @@
             color: rgb(19, 18, 18);
             background-color: gray
         }
+
+        /* media query  */
+
+        @media (min-width: 30em) and (max-width: 70em) {
+
+            .right-plan {
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+            }
+
+            .search-icon {
+                display: none;
+            }
+
+            .right li {
+                display: none;
+            }
+
+            .right>a {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -394,17 +436,22 @@
             <li><a href="#">Product</a></li>
             <li><a href="#">Resources</a></li>
             <li><a href="#">Inspiration</a></li>
-            <li><a href="#">Pricing</a></li>
-
+            <li><a id="pricePlan" href="#">Pricing</a></li>
         </ul>
-        <ul class="right">
-            <li><a href="#">Sales:<a href="">+123456789</a></a></li>
-            <!-- <img id="searchicon" src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.pn" alt=""> -->
 
+        <div class="logo">
+            <img id="logo" onclick="goHome()" src="./Resized Email marketing logo.png" alt="">
+        </div>
+        <div class="search-icon">
+            <img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="">
+        </div>
+
+        <ul class="right">
+            <li><a class="sale" href="#">Sales:<a href="">+1(800)2345-6789</a></a></li>
             <a href="./login.html" class="loginbtn">Log In</a>
             <a href="./signup.html" class="signupbtn">Sign Up</a>
-
         </ul>
+
     </nav>
     <!-- options part  -->
     <div class="options">
@@ -852,4 +899,9 @@
             accordionItemHeader.classList.toggle("active");
         });
     });
+
+    let homebutton = document.querySelector("#logo").addEventListener("click", function () {
+
+        window.location.href = "http://127.0.0.1:5500/index.html";
+    })
 </script>
