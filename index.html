@@ -21,14 +21,22 @@
                 <li><a href="#">Product</a></li>
                 <li><a href="#">Resources</a></li>
                 <li><a href="#">Inspiration</a></li>
-                <li><a href="#">Pricing</a></li>
+                <li><a id="pricePlan" href="#">Pricing</a></li>
             </ul>
-            <img id="searchicon" src="" alt="">
+
+            <div class="logo">
+                <img id="logo" onclick="goHome()" src="./Resized Email marketing logo.png" alt="">
+            </div>
+            <div class="search-icon">
+                <img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="">
+            </div>
+
             <ul class="right">
-                <li><a href="#">Sales:<a href="">+123456789</a></a></li>
+                <li><a class="sale" href="#">Sales:<a href="">+1(800)2345-6789</a></a></li>
                 <a href="./login.html" class="loginbtn">Log In</a>
                 <a href="./signup.html" class="signupbtn">Sign Up</a>
             </ul>
+
         </nav>
         <div class="email-revenue">
             <div class="signup-container">
@@ -70,15 +78,12 @@
             </div>
         </div>
         <div class="video-container">
+            <div class="video">
+                <video width="500px" controls>
+                    <source src="Anthem_I_Mailchimp(720p).mp4" type="video/mp4">
+                </video>
+            </div>
             <div>
-                <center>
-                    <iframe width="600" height="315" src="https://www.youtube.com/embed/RKcNRbeALN8"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-
-                </center>
-
                 <p>Most email marketing platforms tell you how your campeign performs.We analyse Data from the billions
                     of emails we send to give you personalized recommendations for improving your content, targeting,
                     and automations. </p>
@@ -134,7 +139,7 @@
 
                 </div>
             </div>
-            <button class="signupbtn">See all plan details</button>
+            <button onclick="seePriceplan()" class="signupbtn">See all plan details</button>
 
 
         </div>
@@ -142,7 +147,11 @@
             <h1>Generate up to 4x more orders* with Customer Journey Builder automations</h1>
             <div class="subdiv">
                 <div id="animated">
-                    <h1>Animation video</h1>
+
+                    <video controls autoplay loop width="100%">
+                        <source src="./mailchimp(720p).mp4" type="video/mp4">
+
+                    </video>
                 </div>
                 <div id="side-bar">
                     <div>
@@ -200,7 +209,10 @@
             <h1>Get up to 88% more revenue* with our Customer Lifetime Value and Likelihood to Purchase segments</h1>
             <div class="subdiv2">
                 <div id="animated2">
-                    <h1>Animation video</h1>
+                    <video controls autoplay loop width="100%">
+                        <source src="./mailchimp(720p).mp4" type="video/mp4">
+
+                    </video>
                 </div>
                 <div id="side-bar2">
                     <div>
@@ -424,3 +436,29 @@
 </body>
 
 </html>
+<script>
+    // alert("Script attached")
+    let socialMediaDiv = document.querySelector(".social-subdiv").addEventListener("click", function () {
+
+        window.location.href = "http://127.0.0.1:5500/canva.html";
+    })
+
+    let homebutton = document.querySelector("#logo").addEventListener("click", function () {
+
+        window.location.href = "http://127.0.0.1:5500/index.html";
+    })
+
+    let pricePlan = document.querySelector("#pricePlan").addEventListener("click", function () {
+
+        window.location.href = "http://127.0.0.1:5500/pricing.html";
+    })
+
+    let signup = document.querySelector(".signupbtn").addEventListener("click", seePriceplan)
+    function seePriceplan(){
+        window.location.href = "http://127.0.0.1:5500/pricing.html";
+
+    }
+
+
+
+</script>
