@@ -2,7 +2,7 @@
 
 
 
-Deployed Link---- https://eastern-mountain-sport.vercel.app/
+Deployed Link : [https://eastern-mountain-sport.vercel.app/](https://mailchimp-clone-ochre.vercel.app/)
 Our Website Name is:-> Adventure Store for you
 We Used Cyclic for Product API
 For making admin site and login register functionality, we use firebase.
